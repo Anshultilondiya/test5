@@ -1,16 +1,40 @@
-<!DOCTYPE html> 
-<html> 
-   <head> 
-      <meta charset="UTF-8" /> 
-      <title>React based application</title> 
-   </head>
-   <body> 
-      <div id="react-app"></div> 
-      <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script> 
-      <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script> 
-      <script language="JavaScript"> 
-         element = React.createElement('h1', {}, 'Hello React!') 
-         ReactDOM.render(element, document.getElementById('react-app')); 
-      </script> 
-   </body> 
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>React based application</title>
+
+    <link
+      href="./style.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="react-app"></div>
+    <!-- <div id="app"></div> -->
+    <script
+      src="https://unpkg.com/react@17/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script language="JavaScript">
+      element = React.createElement('h1', {}, 'Hello');
+      ReactDOM.render(element, document.getElementById('react-app'));
+      window.React = React;
+      window.ReactDOM = ReactDOM;
+    </script>
+    <script></script>
+    <script
+      type="text/babel"
+      src="./app.js"
+    ></script>
+    <script
+      type="text/babel"
+      src="./index.js"
+    ></script>
+  </body>
 </html>
